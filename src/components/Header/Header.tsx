@@ -11,7 +11,8 @@ export default function Header() {
           "<br><br>&emsp;&emsp;}" +
           "<br>}",
       ],
-      typeSpeed: 20,
+      typeSpeed: 10,
+      showCursor: false,
       onComplete: () => {
         setTyped(true);
       },
@@ -22,14 +23,22 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="bg-slate-900 h-screen">
+    <div className="bg-slate-900 h-screen flex justify-center items-center">
       <span
-        className={`text-4xl text-white transition-all duration-300 select-none  ${
+        className={`text-4xl text-white transition-all duration-500 select-none absolute  ${
           typed ? "blur" : ""
         }`}
         id="typed"
       />
-      {typed && <h1 className="text-4xl text-white">Hello World!</h1>}
+      <div
+        className={` text-white transition-all duration-500  ${
+          typed ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <h1 className={`text-8xl`}>Hello World!</h1>
+        <br />
+        <h2 className={`text-6xl`}>Welcome to my portfolio!</h2>
+      </div>
     </div>
   );
 }
