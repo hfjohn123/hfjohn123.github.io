@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Typed from "typed.js";
+
 export default function Header() {
   const [typed, setTyped] = useState(false);
   useEffect(() => {
@@ -23,22 +24,24 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="bg-slate-900 h-screen flex justify-center items-center">
-      <span
-        className={`text-4xl text-white transition-all duration-500 select-none absolute  ${
-          typed ? "blur" : ""
-        }`}
-        id="typed"
-      />
-      <div
-        className={` text-white transition-all duration-500  ${
-          typed ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <h1 className={`text-8xl`}>Hello World!</h1>
-        <br />
-        <h2 className={`text-6xl`}>Welcome to my portfolio!</h2>
+    <header className="h-[calc(100vh-4rem)] flex flex-col">
+      <div className="bg-slate-900 flex-1 flex justify-center items-center">
+        <span
+          className={`text-4xl text-white transition-all duration-500 select-none absolute  ${
+            typed ? "blur" : ""
+          }`}
+          id="typed"
+        />
+        <div
+          className={` text-white transition-all duration-500  ${
+            typed ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <h1 className={`text-8xl`}>Hello World!</h1>
+          <br />
+          <h2 className={`text-6xl`}>Welcome to my portfolio!</h2>
+        </div>
       </div>
-    </div>
+    </header>
   );
 }
