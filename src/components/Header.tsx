@@ -24,10 +24,10 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="h-[calc(100vh-4rem)] flex flex-col">
+    <header className="h-[calc(100vh-4rem)] flex flex-col print:hidden">
       <div className="bg-slate-900 flex-1 flex justify-center items-center">
         <span
-          className={`text-4xl text-white transition-all duration-500 select-none absolute  ${
+          className={`text-lg md:text-4xl text-white transition-all duration-500 select-none absolute  ${
             typed ? "blur" : ""
           }`}
           id="typed"
