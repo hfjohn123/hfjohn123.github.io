@@ -1,0 +1,16 @@
+[
+  {
+    "title": "This Website",
+    "img": null,
+    "imgDescription": null,
+    "discription": "<p> <br /> I built this website all by myself, starting from scratch. Well, I did use some frameworks and libraries to help me out along the way. Here&apos;s a quick rundown of the tools I used to bring this site to life. <br /> <br /> <div className=\"flex justify-center\"> <ul className=\"list-disc \"> <li>React.js</li> <li>Tailwind CSS</li> <li>Floating UI</li> <li>React Scroll</li> <li>GitHub Pages</li> <li>Vite</li> <li>Hero Icons</li> <li>Typed.js</li> <li>Highcharts.js</li> </ul> </div> </p>",
+    "left": true
+  },
+  {
+    "title": "Kinship Classification Ablation Study",
+    "img": "../assets/kinship.png",
+    "imgDescription": "Error Matrix of the Study",
+    "discription": "<p>This project is sponsored by Indago LLC. <br>The data set we used for this project is <a className=\"inline underline text-blue-500 \" href=\"https://vis-www.cs.umass.edu/lfw/\">FIW</a>. <br>In this project, we applied transfer learning on the dataset with paired images of portraits. We analyze how the imbalanced dataset would affect the result. The resulting models can accurately classify the kinship between two blood-related persons. <br>You can click on the image for report. And there is a link toward the dataset and notebook.</p>",
+    "left": true
+  }
+]

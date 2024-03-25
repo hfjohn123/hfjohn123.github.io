@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Typed from "typed.js";
-
+import { Element } from "react-scroll";
 export default function Header() {
   const [typed, setTyped] = useState(false);
   useEffect(() => {
@@ -24,7 +24,10 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="h-[calc(100vh-4rem)] flex flex-col print:hidden">
+    <Element
+      name="Welcome"
+      className="h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] flex flex-col print:hidden"
+    >
       <div className="bg-slate-900 flex-1 flex justify-center items-center">
         <span
           className={`text-lg md:text-4xl text-white transition-all duration-500 select-none absolute  ${
@@ -32,6 +35,7 @@ export default function Header() {
           }`}
           id="typed"
         />
+
         <div
           className={` text-white transition-all duration-500  ${
             typed ? "opacity-100" : "opacity-0"
@@ -42,6 +46,6 @@ export default function Header() {
           <h2 className={`text-6xl`}>Welcome to my portfolio!</h2>
         </div>
       </div>
-    </header>
+    </Element>
   );
 }
