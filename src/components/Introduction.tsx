@@ -8,12 +8,12 @@ export default function Introduction() {
   return (
     <Element
       name="Introduction"
-      className="flex justify-evenly lg:h-screen items-center flex-col px-5 pt-8 lg:flex-row lg:px-0"
+      className="flex items-center flex-col landscape:flex-row lg:justify-evenly gap-10 lg:gap-0 "
       id="Introduction"
     >
-      <div className="h-[50vh] lg:basis-5/12 flex justify-evenly items-center relative w-full lg:h-full ">
+      <div className="landscape:basis-5/12 flex justify-evenly items-center relative w-full landscape:h-[100vh] h-[50vh] md:landscape:h-[60vh] ">
         <img
-          className={`absolute object-cover h-full lg:w-full lg:h-auto rounded-3xl transition-all duration-500 z-0
+          className={`absolute object-cover rounded-3xl transition-all duration-500 z-0 h-full w-full
           ${hovered ? "" : "blur-sm"}`}
           src="../assets/photo1.jpg"
           alt="Qi's photo"
@@ -29,7 +29,7 @@ export default function Introduction() {
           o(*////▽////*)q
         </p>
       </div>
-      <div className="basis-5/12 text-md md:text-xl lg:text-3xl flex flex-col justify-center gap-10 lg:h-full">
+      <div className="landscape:basis-5/12 flex flex-col justify-center gap-10">
         <p>
           <b>Qi Song</b>
           <br />
@@ -50,22 +50,19 @@ export default function Introduction() {
         <div className="justify-center lg:justify-normal flex gap-6 lg:gap-10">
           <button onClick={() => window.print()}>
             <DocumentArrowDownIcon
-              className="size-14 md:size-16 lg:size-20
+              className="size-12 md:size-14 lg:size-16
             "
             />
           </button>
           <button
             onClick={() => (location.href = "https://github.com/hfjohn123")}
           >
-            <img src={GitHubIcon} className="size-14 md:size-16 lg:size-20" />
+            <img src={GitHubIcon} className="size-12 md:size-14 lg:size-16" />
           </button>
           <button
             onClick={() => (location.href = "https://www.linkedin.com/in/qs7/")}
           >
-            <img
-              src={LinkedInIcon}
-              className="size-14 md:size-16 lg:size-20 "
-            />
+            <img src={LinkedInIcon} className="size-12 md:size-14 lg:size-16" />
           </button>
         </div>
       </div>

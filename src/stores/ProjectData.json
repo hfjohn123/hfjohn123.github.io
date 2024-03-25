@@ -1,16 +1,44 @@
 [
   {
     "title": "This Website",
-    "img": null,
-    "imgDescription": null,
-    "discription": "<p> <br /> I built this website all by myself, starting from scratch. Well, I did use some frameworks and libraries to help me out along the way. Here&apos;s a quick rundown of the tools I used to bring this site to life. <br /> <br /> <div className=\"flex justify-center\"> <ul className=\"list-disc \"> <li>React.js</li> <li>Tailwind CSS</li> <li>Floating UI</li> <li>React Scroll</li> <li>GitHub Pages</li> <li>Vite</li> <li>Hero Icons</li> <li>Typed.js</li> <li>Highcharts.js</li> </ul> </div> </p>",
-    "left": true
+    "discription": "<p><br />&emsp;I built this website all by myself, starting from scratch. Well, I did use some frameworks and libraries to help me out along the way. Here&apos;s a quick rundown of the tools I used to bring this site to life: <br /> <div className=\"flex justify-center\"> <ul className=\"list-disc \"> <li>React.js</li> <li>Tailwind CSS</li> <li>Floating UI</li> <li>React Scroll</li> <li>GitHub Pages</li> <li>Vite</li> <li>Hero Icons</li> <li>Typed.js</li> <li>Highcharts.js</li> </ul> </div> </p>"
+  },
+  {
+    "title": "Tweet Analysis To Predict Early Signs For Pandemic",
+    "img": "./assets/Tweet.jpg",
+    "imgDescription": "Historical Tweet Analysis Chart",
+    "imgUrl": "https://drive.google.com/drive/folders/1Bh6ENnvVHX8heo7afgY56jQo7Vt7jB6H?usp=sharing",
+    "discription": "<p>Our team's target is to find whether there is any potential early warning signal that can indicate a disease outbreak in near future across social platform, specifically Twitter. The dataset contains 150M tweets between 2019-11-01 to 2020-04-30 posted before and during the early stage of the Covid in the USA provided by Prof Chen Li and his team. We also have historical data for year 2017, 2018, 2019.<br>You can click on the image for report and jupyter notebook.</p>",
+    "left": false
+  },
+  {
+    "title": "GANs to create Monet-style Art",
+    "img": "./assets/Monet_Gan.png",
+    "imgDescription": "Compare Original and Generated Image",
+    "imgUrl": "./assets/Monet_GAN.pdf",
+    "discription": "<p>One of the popular applications of AI techniques is to map the input image from one style to another. For example, by uploading a selfie, people can obtain a cartoon version of themselves. Unlike image-to-image translation, for many tasks, paired training data will not be available. In this project, we are faced with the challenge of transforming a real-life photo into a Monet-style painting. We trained a CycleGan model based on 300 Monet paintings achieved photos similar to Monet’s style after tuning the parameters. <br>You can click on the image for report. And there is a link toward the dataset.</p>"
   },
   {
     "title": "Kinship Classification Ablation Study",
-    "img": "../assets/kinship.png",
+    "img": "./assets/kinship.png",
     "imgDescription": "Error Matrix of the Study",
-    "discription": "<p>This project is sponsored by Indago LLC. <br>The data set we used for this project is <a className=\"inline underline text-blue-500 \" href=\"https://vis-www.cs.umass.edu/lfw/\">FIW</a>. <br>In this project, we applied transfer learning on the dataset with paired images of portraits. We analyze how the imbalanced dataset would affect the result. The resulting models can accurately classify the kinship between two blood-related persons. <br>You can click on the image for report. And there is a link toward the dataset and notebook.</p>",
-    "left": true
+    "imgUrl": "./assets/271p.pdf",
+    "discription": "<p>This project is sponsored by Indago LLC. <br>The data set we used for this project is <a href=\"https://vis-www.cs.umass.edu/lfw/\">FIW</a>. <br>In this project, we applied transfer learning on the dataset with paired images of portraits. We analyze how the imbalanced dataset would affect the result. The resulting models can accurately classify the kinship between two blood-related persons. <br>You can click on the image for report. And there is a link toward the dataset and notebook.</p>",
+    "left": false
+  },
+  {
+    "title": "Rurl—— Short Url Generator",
+    "img": "./assets/Rurl.png",
+    "imgDescription": "Screen Shot of the Website",
+    "imgUrl": "./assets/271p.pdf",
+    "discription": "<p>This website is a short URL generator that helps you transform long URLs into shorter ones for easier sharing. As an example of this Demo, which collects user agent information from the request. This showcases how a website like this can benefit businesses, using MVC and HTTP Server by SpringBoot, Spring Data as ORM, and MongoDB for data storage. The design and function are based on a Restful API. You can access the source code by clicking on the image.</p>"
+  },
+  {
+    "title": "VGG-Like Neural Network Performance Research",
+    "img": "./assets/VGG.png",
+    "imgDescription": "Accuracy graph of the model",
+    "imgUrl": "./assets/project.zip",
+    "discription": "<p>For my first deep learning project, I used a dataset from Kaggle called <a href=\"https://www.kaggle.com/c/painter-by-numbers\">\"Painter by Numbers.\"</a> I built a VGG-like model using TensorFlow and trained and tested it with various datasets to evaluate its performance. Through analysis, I was able to determine the factors that contributed to differences in accuracy. You can access the Jupyter Notebook, report, and presentation files by clicking on the image.</p>",
+    "left": false
   }
 ]

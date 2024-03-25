@@ -22,16 +22,14 @@ const options = {
     },
   ],
   title: {
-    text: "My Skills",
-    style: {
-      fontSize: "5vmin",
-    },
+    text: "",
   },
 };
 export default function Skills() {
   console.log(options);
   return (
-    <Element name="Skills" className="my-10">
+    <Element name="Skills">
+      <h1 className="text-center mb-5">My Skills</h1>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </Element>
   );

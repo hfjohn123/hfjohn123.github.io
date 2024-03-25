@@ -24,7 +24,7 @@ export default function NavBar({ className }: { className?: string }) {
   });
 
   return (
-    <div className={`bg-gray-800 sticky z-50 top-0 ${className}}`}>
+    <div className={`bg-slate-800 sticky z-50 top-0 ${className}}`}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
         <div className="relative flex h-16 items-center justify-between lg:h-20">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -60,8 +60,8 @@ export default function NavBar({ className }: { className?: string }) {
                     smooth={true}
                     className={classNames(
                       item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        ? "bg-slate-900 text-white"
+                        : "text-slate-300 hover:bg-slate-700 hover:text-white",
                       "rounded-md px-3 py-2 text-md font-medium lg:text-lg"
                     )}
                     aria-current={item.current ? "page" : undefined}
@@ -83,8 +83,8 @@ export default function NavBar({ className }: { className?: string }) {
                 key={item.name}
                 className={classNames(
                   item.current
-                    ? "bg-gray-900 text-white"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    ? "bg-slate-900 text-white"
+                    : "text-slate-300 hover:bg-slate-700 hover:text-white",
                   "block rounded-md px-3 py-2 text-base font-medium bg-slate-500"
                 )}
                 aria-current={item.current ? "page" : undefined}
