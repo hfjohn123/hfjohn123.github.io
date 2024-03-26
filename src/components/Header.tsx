@@ -28,7 +28,7 @@ export default function Header() {
       name="Welcome"
       className="h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] flex flex-col print:hidden"
     >
-      <div className="bg-slate-900 flex-1 flex justify-center items-center">
+      <div className="bg-stone-900 flex-1 flex justify-center items-center">
         <span
           className={`text-lg md:text-4xl text-white transition-all duration-500 select-none absolute  ${
             typed ? "blur" : ""

@@ -26,7 +26,6 @@ const options = {
   },
 };
 export default function Skills() {
-  console.log(options);
   return (
     <Element name="Skills">
       <h1 className="text-center mb-5">My Skills</h1>
