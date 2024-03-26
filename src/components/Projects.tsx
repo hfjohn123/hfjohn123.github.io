@@ -1,5 +1,3 @@
-import { Element } from "react-scroll";
-
 export default function Projects({
   title,
   img,
@@ -16,10 +14,7 @@ export default function Projects({
   left?: boolean;
 }) {
   return (
-    <Element
-      name={title}
-      className="flex justify-evenly items-center flex-col lg:flex-row"
-    >
+    <div className="flex justify-evenly items-center flex-col lg:flex-row">
       <h2 className="basis-1/5 lg:hidden order-1">{title}</h2>
       {img && imgDescription && (
         <div
@@ -60,6 +55,6 @@ export default function Projects({
         <h1 className="hidden lg:block text-center ">{title}</h1>
         {children}
       </div>
-    </Element>
+    </div>
   );
 }
