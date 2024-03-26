@@ -25,6 +25,7 @@ export default function Introduction() {
           className={`text-2xl sm:text-3xl lg:text-5xl text-white z-10 select-none ${
             hovered ? "opacity-0 -z-10" : "opacity-100"
           } transition-500 duration-500`}
+          onMouseEnter={() => setHovered(true)}
         >
           o(*////▽////*)q
         </p>
@@ -52,15 +53,18 @@ export default function Introduction() {
             <DocumentArrowDownIcon
               className="size-12 md:size-14 lg:size-16
             "
+              title="Download Resume"
             />
           </button>
           <button
             onClick={() => (location.href = "https://github.com/hfjohn123")}
+            title="GitHub"
           >
             <img src={GitHubIcon} className="size-12 md:size-14 lg:size-16" />
           </button>
           <button
             onClick={() => (location.href = "https://www.linkedin.com/in/qs7/")}
+            title="LinkedIn"
           >
             <img src={LinkedInIcon} className="size-12 md:size-14 lg:size-16" />
           </button>
