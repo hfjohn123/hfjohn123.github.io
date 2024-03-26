@@ -7,15 +7,12 @@ const navigation = [
   { name: "Welcome", href: "Welcome" },
   { name: "Introduction", href: "Introduction" },
   { name: "Skills", href: "Skills" },
-  { name: "Projects", href: "This Website" },
+  { name: "Projects", href: "Projects" },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function NavBar({ className }: { className?: string }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [offset, setOffset] = useState(0);
   const { refs, floatingStyles } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -25,15 +22,28 @@ export default function NavBar({ className }: { className?: string }) {
   useEffect(() => {
     scrollSpy.update();
   }, []);
+
   return (
-    <div className={`bg-stone-800 sticky z-50 top-0 ${className}}`}>
+    <div
+      className={`bg-stone-800 sticky z-50 top-0 ${
+        offset > window.innerHeight ? "opacity-50" : "opacity-100"
+      } ${className} `}
+      onMouseEnter={() => setOffset(0)}
+      onMouseLeave={() => {
+        setOffset(window.scrollY);
+        setIsOpen(false);
+      }}
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
         <div className="relative flex h-16 items-center justify-between lg:h-20">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <button
               ref={refs.setReference}
-              onClick={() => setIsOpen((prev) => !prev)}
+              onClick={() => {
+                setIsOpen((prev) => !prev);
+                setOffset(0);
+              }}
               className="relative inline-flex items-center justify-center rounded-md p-2 text-stone-400 hover:bg-stone-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <span className="absolute -inset-0.5" />
@@ -62,6 +72,11 @@ export default function NavBar({ className }: { className?: string }) {
                     to={item.href}
                     spy={true}
                     smooth={true}
+                    offset={-100}
+                    onSetActive={() => {
+                      setOffset(window.scrollY);
+                      setIsOpen(false);
+                    }}
                     className="text-stone-300 hover:bg-stone-700 hover:text-white rounded-md px-3 py-2 text-md font-medium lg:text-lg"
                   >
                     {item.name}
@@ -83,6 +98,7 @@ export default function NavBar({ className }: { className?: string }) {
                 to={item.href}
                 smooth={true}
                 spy={true}
+                offset={-100}
                 className="text-stone-300 hover:bg-stone-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium bg-stone-500"
               >
                 {item.name}
